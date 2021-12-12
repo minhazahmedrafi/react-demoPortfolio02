@@ -1,0 +1,112 @@
+.intro{
+    display: flex;
+    height: 100vh;
+}
+.introLeft{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introRight{
+    flex: 1;
+    position: relative;
+}
+.introLeftWrapper{
+    padding: 50px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.introHello{
+    font-size: 30px;
+    font-weight: 300;
+}
+.introName{
+    font-size: 60px;
+}
+.introTitle{
+    height: 50px;
+    overflow: hidden;
+}
+.introTitleItem{
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #59b256;
+    display: flex;
+    align-items: center;
+}
+.introScroll{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+
+.introTitleWrapper{
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;
+}
+@keyframes move {
+    25%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+    75%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(-200px);
+    }
+}
+
+
+.introImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.introImgOverlay{
+    clip-path: polygon(100% 0%, 100% 52%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background-color: #59b256;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .intro{
+        flex-direction: column;
+    }
+    .introLeftWrapper{
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .introDesc{
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 1500px) {
+    .introLeftWrapper{
+        height: 50%;
+    }
+    
+}

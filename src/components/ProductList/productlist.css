@@ -1,0 +1,35 @@
+.pl{
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.plTitle{
+    font-size: 50px;
+    font-weight: 600;
+}
+.plTexts{
+    width: 65%;
+}
+.plDesc{
+    margin: 20px 0px;
+}
+.plList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+   .pl{
+       padding: 10px;
+   }
+   .plTexts{
+       width: 100%;
+   }
+   .plDesc{
+       display: none;
+   }
+}
